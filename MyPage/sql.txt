@@ -1,0 +1,23 @@
+-- create database (change name if you prefer)
+CREATE DATABASE IF NOT EXISTS contact_db
+  CHARACTER SET = utf8mb4
+  COLLATE = utf8mb4_unicode_ci;
+
+USE contact_db;
+
+-- table to store contact form submissions
+CREATE TABLE IF NOT EXISTS contacts (
+  id INT UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
+  name VARCHAR(150) NOT NULL,
+  email VARCHAR(255) NOT NULL,
+  phone VARCHAR(50) DEFAULT NULL,
+  subject VARCHAR(255) DEFAULT NULL,
+  message TEXT NOT NULL,
+  ip VARCHAR(45) DEFAULT NULL,
+  user_agent VARCHAR(255) DEFAULT NULL,
+  status ENUM('new','read','archived') NOT NULL DEFAULT 'new',
+  created_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  INDEX (email),
+  INDEX (created_at),
+  FULLTEXT KEY ft_message (message)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
