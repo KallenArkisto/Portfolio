@@ -18,7 +18,7 @@ export default function SiteHeader() {
 
       <div className="header-top">
         <div className="profile-img">
-          <img src="/img/profile/squarecut1.jpg" alt="Kalle Kleemola" className="img-fluid" />
+          <img src={`${import.meta.env.BASE_URL}img/profile/squarecut1.jpg`} alt="Kalle Kleemola" className="img-fluid" />
         </div>
 
         <a href="#hero" className="logo d-flex align-items-center justify-content-center">

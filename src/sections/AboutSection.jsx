@@ -16,7 +16,7 @@ export default function AboutSection() {
                 <div className="col-lg-4" data-aos="fade-right" data-aos-delay="200">
                   <div className="profile-section">
                     <div className="profile-image-container">
-                      <img src="/img/profile/pfp 2 squarecut.jpg" className="img-fluid" alt="Kalle Kleemola" /> 
+                      <img src={`${import.meta.env.BASE_URL}img/profile/pfp 2 squarecut.jpg`} className="img-fluid" alt="Kalle Kleemola" /> 
                     </div>
                     <div className="profile-meta">
                       <div className="location">

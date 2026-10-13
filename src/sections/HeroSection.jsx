@@ -36,7 +36,7 @@ export default function HeroSection() {
           <div className="col-lg-6 order-1 order-lg-2">
             <div className="hero-image" data-aos="fade-up" data-aos-delay="300">
               <div className="image-wrapper">
-                <img src="/img/profile/profile-square-13.webp" alt="Creative Designer Portfolio" className="img-fluid main-image" />
+                <img src={`${import.meta.env.BASE_URL}img/profile/profile-square-13.webp`} alt="Creative Designer Portfolio" className="img-fluid main-image" />
                 <div className="floating-card card-1" data-aos="fade-up" data-aos-delay="600">
                   <i className="bi bi-palette"></i>
                   <span>UI Design</span>
